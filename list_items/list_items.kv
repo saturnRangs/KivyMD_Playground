@@ -1,0 +1,160 @@
+#:kivy 1.0.9
+#:import utils kivy.utils
+
+<CustomListItem@ThreeLineAvatarListItem>:
+    theme_text_color: "Custom"
+    text_color: 1, 1, 1, 1
+    secondary_theme_text_color: "Custom"
+    secondary_text_color: 1, 1, 1, 1
+    tertiary_theme_text_color: "Custom"
+    tertiary_text_color: 0.5, 0.11, 1, 1
+
+BoxLayout:
+    orientation: 'vertical'
+    
+
+    MDBoxLayout:
+        adaptive_height: True
+        spacing: "12dp"
+        x: "24dp"
+        #pos_hint: {"top": .96}
+
+        MDBoxLayout:
+            size_hint_y: None
+            size: "120dp", "120dp"
+            #radius: self.width / 2
+            
+            #MDLabel:
+             #   text: "Some Stuff"
+
+            FitImage:
+                #radius: self.width / 2
+                size_hint: 1, 1
+               
+                
+                source:
+                    "assets/M45.jpg"
+
+    ScrollView:
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            size_hint: 1, None
+            height: self.minimum_height
+            #md_bg_color: 0, 0.1, 1, 1
+
+
+
+            MDList:
+                id: list_view
+
+                OneLineIconListItem:
+                    text:"[b]Stuff in Space[/b]"
+                    font_style: 'H6'
+                    IconLeftWidget:
+                        icon: "arrow-down-drop-circle"
+                    
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# / #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_1.png"
+
+
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# * #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_2.png"
+                    
+
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# @ #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_3.png"
+
+
+                OneLineIconListItem:
+                    text:"[b]Items[/b]"
+                    font_style: 'H6'
+                    IconLeftWidget:
+                        icon: "arrow-down-drop-circle"
+                    
+
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# # #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_4.png"
+
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# # #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_5.png"
+
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# # #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_1.png"
+
+                OneLineIconListItem:
+                    text:"[b]Stuff[/b]"
+                    font_style: 'H6'
+                    IconLeftWidget:
+                        icon: "arrow-down-drop-circle"
+
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# # #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_2.png"
+
+
+                ThreeLineAvatarListItem:
+                    text: "[b]Object[/b]"
+                    secondary_text: "Location"
+                    tertiary_text: "[b]# # #[/b]"
+                    adaptive_height: True
+                    ImageLeftWidget:
+                        source: "assets/picture_3.png"
+
+    MDBottomNavigation:
+        size_hint: 1, 0.1
+        md_bg_color: 0, 1, 0.5, 1
+
+        MDBottomNavigationItem:
+            name: 'Featured'
+            text: 'Featured'
+            icon: 'progress-star'
+
+        MDBottomNavigationItem:
+            name: 'Search'
+            text: 'Search'
+            icon: 'card-search-outline'
+
+        MDBottomNavigationItem:
+            name: 'Full Catalogue'
+            text: 'Full Catalogue'
+            icon: 'database'
+
+        MDBottomNavigationItem:
+            name: 'Settings'
+            text: 'Settings'
+            icon: 'application-settings'

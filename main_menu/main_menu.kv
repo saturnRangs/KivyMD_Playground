@@ -1,0 +1,61 @@
+#:kivy 1.0.9
+#:import utils kivy.utils
+
+<MainPage>: 
+
+    padding: 15
+    
+    canvas.before:
+        
+        Rectangle:
+            size: self.size
+            source: 'assets/background.jpeg'
+
+    Image:
+        source: 'assets/picture_3.png'
+        allow_stretch: True
+        keep_ratio: True
+        pos_hint: {"center_x": 0.5, "center_y": 0.8}
+        size_hint: 0.5, 0.35
+
+    Label:
+        text: "Main Menu"
+        pos_hint: {"center_x": 0.5, "center_y": 0.55}
+        font_size: '50sp'
+        size_hint_y: None
+        height: self.texture_size[1] + dp(10)
+
+
+    MDRoundFlatButton: 
+        text: "Play"
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+        size_hint: 0.3, 0.14
+        background_normal: " "
+        md_bg_color: 30/255, 155/255, 60/255, 0.8
+        text_color: 0, 0, 0, 1
+        line_color: 'black'
+        line_width: 2
+        
+    MDRoundFlatButton: 
+        text: "Learn"
+        pos_hint: {"center_x": 0.5, "center_y": 0.25}
+        size_hint: 0.3, 0.14
+        background_normal: " "
+        md_bg_color: 36/255, 212/255, 245/255, 0.8
+        text_color: 0, 0, 0, 1
+        line_color: 'black'
+        line_width: 2
+    
+    Button: 
+        text: "Settings"
+        pos: root.right - self.width - 20, root.y + 20
+        size_hint: 0.1, 0.1
+        background_normal: " "
+        background_color: 31/255, 23/255, 151/255, 0.8
+
+    Button: 
+        text: "Store"
+        pos: root.x + 20, root.y + 20
+        size_hint: 0.1, 0.1
+        background_normal: " "
+        background_color: 181/255, 82/255, 100/255, 1

@@ -1,0 +1,308 @@
+#:kivy 1.0.9
+#:import Window kivy.core.window.Window
+#:import hex kivy.utils.get_color_from_hex
+
+BoxLayout:
+    orientation: 'vertical'
+
+    FloatLayout:
+        size_hint: 1, 0.08
+
+    #BACKGROUND ########
+        FitImage:
+            source: 'assets/background.jpeg'  
+            size_hint: 1, 1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            allow_stretch: True
+            keep_ratio: True
+
+
+
+            #LABEL ###############
+        MDLabel:
+            text: "Card List"
+            id: text_label
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            halign: "center"
+            size_hint: 0.7, 1
+            valign: "top"
+            #padding: "16dp"
+            font_style: "H5"
+            color: "#fff2f5"
+    
+    
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: dp(68)
+        padding: [dp(14), dp(8)]
+        
+        BoxLayout:
+            spacing: dp(12)
+            MDLabel:
+                text: 'Featured List'
+                font_style: "H4"
+                color: "#fff2f5"
+            
+    
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [dp(14), dp(4)]
+
+        ScrollView:
+            do_scroll_y: True
+            size_hint_y: None  
+            height: self.parent.height - dp(14) 
+
+            MDGridLayout:
+                cols: 1
+                padding: dp(10)
+                spacing: dp(10)
+                minimum_height: dp(30)
+                adaptive_height: True 
+                padding_bottom: dp(10)
+ 
+
+                AnchorLayout:
+                    size_hint: 1, None
+                    height: "40dp"
+                    padding: [dp(14), dp(8)]
+
+                    MDLabel:
+                        text: "Top Hits"
+                        id: text_label
+                        #pos_hint: {'center_x': 0.1, 'center_y': 0.5}
+                        #halign: "left"
+                        size_hint_x: 1
+                        valign: "top"
+                        font_style: "H4"
+                        color: "#fff2f5"
+                        size_hint_y: None
+                        height:dp(30)
+                        spacing:dp(15)
+                        #padding_bottom: dp(10)
+                        #padding:dp(0), dp(20)
+                        anchor_x: "left"
+                        anchor_y: "middle"
+
+                HeroCard:
+                    source: "assets/M45.jpg"
+                    label: "Object 1"
+
+                HeroCard:
+                    source: "assets/M42.jpeg"
+                    label: "Object 2"
+
+                HeroCard:
+                    source: "assets/NGC2903.jpeg"
+                    label: "Object 3"
+
+                AnchorLayout:
+                    size_hint: 1, None
+                    height: "50dp"
+                    padding: [dp(14), dp(8)]
+
+                    MDLabel:
+                        text: "List 2"
+                        id: text_label
+                        #pos_hint: {'center_x': 0.1, 'center_y': 0.5}
+                        #halign: "left"
+                        size_hint_x: 1
+                        valign: "top"
+                        font_style: "H4"
+                        color: "#fff2f5"
+                        size_hint_y: None
+                        height:dp(30)
+                        spacing:dp(15)
+                        #padding_bottom: dp(10)
+                        #padding:dp(0), dp(20)
+                        anchor_x: "left"
+                        anchor_y: "middle"
+
+                MDGridLayout:
+                    cols: 2
+                    rows: 2
+                    padding: dp(10)
+                    spacing: dp(10)
+                    adaptive_height: True 
+
+                    HeroCard2:
+                        source: "assets/M42.jpeg"
+
+                    HeroCard2:
+                        source: "assets/background.jpeg"
+
+                    HeroCard2:
+                        source: "assets/picture_2.png"
+
+                    HeroCard2:
+                        source: "assets/picture_5.png"
+
+                AnchorLayout:
+                    size_hint: 1, None
+                    height: "50dp"
+                    padding: [dp(14), dp(8)]
+
+                    MDLabel:
+                        text: "Out Now"
+                        id: text_label
+                        #pos_hint: {'center_x': 0.1, 'center_y': 0.5}
+                        #halign: "left"
+                        size_hint_x: 1
+                        valign: "top"
+                        font_style: "H4"
+                        color: "#fff2f5"
+                        size_hint_y: None
+                        height:dp(30)
+                        spacing:dp(15)
+                        #padding_bottom: dp(10)
+                        #padding:dp(0), dp(20)
+                        anchor_x: "left"
+                        anchor_y: "middle"
+
+                    #MDIcon:
+                     #   source: "icons/icon_winter.png"
+                      #  anchor_x: "left"
+                       # anchor_y: "middle"
+
+                HeroCard:
+                    source: "assets/picture_2.png"
+                    label: "Object 1"
+
+                HeroCard:
+                    source: "assets/picture_4.png"
+                    label: "Object 2"
+
+                HeroCard:
+                    source: "assets/M42.jpeg"
+                    label: "Object 3"
+
+                AnchorLayout:
+                    size_hint: 1, None
+                    height: "50dp"
+                    padding: [dp(14), dp(8)]
+
+                    MDLabel:
+                        text: "New Stuff"
+                        id: text_label
+                        #pos_hint: {'center_x': 0.1, 'center_y': 0.5}
+                        #halign: "left"
+                        size_hint_x: 1
+                        valign: "top"
+                        font_style: "H4"
+                        color: "#fff2f5"
+                        size_hint_y: None
+                        height:dp(30)
+                        spacing:dp(15)
+                        #padding_bottom: dp(10)
+                        #padding:dp(0), dp(20)
+                        anchor_x: "left"
+                        anchor_y: "middle"
+
+                HeroCard:
+                    source: "assets/picture_2.png"
+                    label: "Object 1"
+
+                HeroCard:
+                    source: "assets/picture_4.png"
+                    label: "Object 2"
+
+                HeroCard:
+                    source: "assets/M42.jpeg"
+                    label: "Object 3"
+
+    MDBottomNavigation:
+        size_hint: 1, 0.1
+        #md_bg_color: 0, 1, 0.5, 1
+
+        MDBottomNavigationItem:
+            name: 'Featured'
+            text: 'Featured'
+            icon: 'progress-star'
+
+
+
+        MDBottomNavigationItem:
+            name: 'Catalogue'
+            text: 'Catalogue'
+            icon: 'database'
+
+        MDBottomNavigationItem:
+            name: 'Settings'
+            text: 'Settings'
+            icon: 'cog'
+
+
+<HeroCard@MDCard>
+    orientation: "vertical"
+    size_hint: 1, None
+    height: "340dp"
+    elevation: 4
+    source: ""
+    label: ""
+    radius: 24
+    padding: 12
+    ripple_behavior:True
+    on_release: app.my_callback()
+    elevation: 6
+    md_bg_color: "#ffffff"
+    MDHeroFrom:
+        id: hero_from
+        size_hint: 1, 0.95
+        #height: root.height / 1.8
+        #ffffff
+
+        FitImage:
+            source: root.source
+            size_hint: None, None
+            size: hero_from.size
+            radius: 24
+            allow_stretch: True
+
+    AnchorLayout:
+        size_hint: 1, 0.1
+
+        MDLabel:
+            text: root.label
+            bold: True
+            adaptive_height: True
+            #padding: 12, 12
+            font_style: "H5"
+            anchor_x: "left"
+            anchor_y: "middle"
+
+        
+
+    
+
+<HeroCard2@MDCard>
+    orientation: "vertical"
+    size_hint: 1, None
+    height: "120dp"
+    elevation: 4
+    source: ""
+    radius: 24
+    padding: 5
+    ripple_behavior:True
+    on_release: app.my_callback()
+    elevation: 6
+    md_bg_color: "#ffffff"
+    MDHeroFrom:
+        id: hero_from
+        size_hint: 1, 0.9
+        #height: root.height / 1.8
+        #ffffff
+
+        FitImage:
+            source: root.source
+            size_hint: None, None
+            size: hero_from.size
+            radius: 24
+            allow_stretch: True
+
+    MDLabel:
+        text: "Object"
+        bold: True
+        adaptive_height: True
+        padding: 12, 12
+        font_style: "Body2"
